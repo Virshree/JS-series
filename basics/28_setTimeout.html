@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeout </title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">STop</button>
+
+</body>
+<!-- //SetTimeout -  It wait for [2sec or any time user give to it] and then exceute it once. -
+    //ClearTimeout- It stop or clear timeout and end the session->
+-->
+<script>
+    const sayHi=()=>{
+        console.log("Virshree")
+    }
+  const changeText= ()=> {document.querySelector("h1").innerHTML="JS  Series"}
+       setTimeout(changeText,2000);
+        // console.log(changeMe)
+
+const changeMe=clearTimeout(changeText,2000)
+
+document.querySelector("#stop" ).addEventListener("click",(e)=>{
+    console.log("stop");
+    clearInterval(changeMe);
+})
+</script>
+</html>

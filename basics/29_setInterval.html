@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval</title>
+</head>
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<!--SetInterval -it happen continues after the user given to it-->
+<!--ClearInterval-it clear or stop interval -->
+<script>
+// setInterval(document.querySelector("#start").addEventListener("click", function(){
+//     console.log("Start clicked");
+// }),1000);
+// setInterval(document.getElementById("stop").addEventListener("click", function(){
+//     console.log("stop clicked");
+// },1000));
+
+// setInterval(startMe);;
+const start=document.querySelector('#start').addEventListener('click',()=>{
+    console.log("start clicked");
+})
+setInterval(start,1000)
+
+</script>
+</html>

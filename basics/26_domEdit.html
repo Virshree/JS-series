@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Elements|Edit and Remove Elements|Chai aur code</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <ul class="language">
+      <li>Javascript</li>
+    </ul>
+  </body>
+  <script>
+
+    //here tree needs to be transverse time consuming
+    function addLang(lang) {
+      const li = document.createElement("li");
+      li.innerHTML = `${lang}`;
+
+      document.querySelector(".language").appendChild(li);
+    }
+    addLang("c++");
+    addLang("java");
+
+
+    //more optimize way to add language
+    function addOptiLang(lang) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(lang));
+      document.querySelector(".language").appendChild(li);
+    }
+    addOptiLang("ruby");
+    addOptiLang("python");
+
+    //EDIT ELEMENT
+ 
+    //first select element to edit
+    const secondLang=document.querySelector("li:nth-child(2)");
+    // console.log(secondLang);
+    // secondLang.textContent="HTML";
+    const newli=document.createElement("li");
+    newli.textContent="Mojo";
+
+    secondLang.replaceWith(newli);
+
+//edit second method
+    const firstLang=document.querySelector("li:first-child");
+    // console.log(firstLang);//Javascript
+    firstLang.outerHTML='<li>Ruby</li>';
+
+    //remove elements
+
+    const lastlang=document.querySelector("li:last-child");
+    lastlang.remove();
+
+  </script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM ELEMENTS</title>
+    <style>
+      .bg-black {
+        background-color: #212121;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <div class="parent">
+      <!--hello-->
+      <div class="day">Monday</div>
+      <div class="day">
+        Tuesday
+        <p>hello</p>
+      </div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+    </div>
+
+    <script>
+      const parent = document.querySelector(".parent");
+      // console.log(parent.children);//HTML COLLECTION [4]
+      // console.log(parent.children[0])//Monday
+
+      // console.log(parent.children[1].innerText)//
+
+      for (let i = 0; i < parent.children.length; i++) {
+        // console.log(parent.children[i].innerHTML);
+      }
+
+      parent.children[1].style.color = "orange"; //Tuesday hello
+
+      parent.children[2].style.color = "green"; //Wednesday hello
+
+      // console.log(parent.firstElementChild);//div div
+
+      // console.log(parent.lastElementChild);//div div//div div
+
+      const dayOne = document.querySelector(".day");
+
+      // console.log(dayOne);//  <div class="day">Monday</div>
+
+      // console.log(dayOne.innerHTML);//Monday
+
+      // console.log(dayOne.parentElement);// <div class="parent">..all</div>
+
+      // console.log(dayOne.nextElementSibling)//Tuesday
+
+      console.log("Nodes", parent.childNodes); //Nodelist[9]
+    </script>
+  </body>
+</html>
