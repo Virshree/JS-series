@@ -1,11 +1,12 @@
 ## project link
 
  [click here](https://stackblitz.com/@Virshree)
- 
+
 ## Solution
 
 
 ## Project 1 -Color switcher
+
  ```javascript
 
 
@@ -32,8 +33,11 @@ buttons.forEach((btn) => {
     }
   });
 });
+```
 
-##  Project 2 - BMI INDEX CALCULATION
+## Project 2 - BMI INDEX CALCULATION
+
+```javascript
 
 const form = document.querySelector('form');
 
@@ -70,8 +74,11 @@ form.addEventListener('submit', (e) => {
   
 });
 
+```
 
 ## Project 3 - Digital Clock
+
+```javascript
 
 const clock = document.getElementById('clock');
 
@@ -80,9 +87,11 @@ setInterval(() => {
   // console.log(date);
   clock.innerHTML = date;
 }, 1000);
-
+```
 
 ## Project 4- Guess any number
+
+``` javascript
 
 let randomNumber = parseInt(Math.random() * 100 + 1);
 // console.log(randomNumber);
@@ -177,12 +186,14 @@ function startGame() {
     startOver.removeChild(p);
 
   })
-
-
 }
 
 
+```
 ## Project 5 - Keyboard check
+
+ ```javascript
+
 
 const insert=document.getElementById('insert');
 window.addEventListener('keydown',function (e){
@@ -203,7 +214,12 @@ window.addEventListener('keydown',function (e){
   </div>`
 })
 
+```
+
 ## Project 6 - Unlimited Colors
+
+``` javascript
+
 
 // const randomColor=Math.floor(Math.random()*16);
 // console.log(randomColor);
@@ -235,4 +251,7 @@ function stopChangingColor(){
     clearInterval(IntervalId)
     IntervalId=null;
 }
-document.querySelector('#stop').addEventListener('click',stopChangingColor)
+document.querySelector('#stop').addEventListener('click',stopChangingColor) 
+
+
+```
